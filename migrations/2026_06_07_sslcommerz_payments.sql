@@ -1,0 +1,27 @@
+CREATE TABLE IF NOT EXISTS tbl_payment_transactions (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    order_id INT NOT NULL,
+    gateway VARCHAR(40) NOT NULL DEFAULT 'sslcommerz',
+    transaction_id VARCHAR(80) NOT NULL UNIQUE,
+    val_id VARCHAR(120) NULL,
+    bank_tran_id VARCHAR(120) NULL,
+    amount DECIMAL(10,2) NOT NULL DEFAULT 0,
+    currency VARCHAR(10) NOT NULL DEFAULT 'BDT',
+    status VARCHAR(40) NOT NULL DEFAULT 'Initiated',
+    session_key VARCHAR(120) NULL,
+    gateway_url TEXT NULL,
+    card_type VARCHAR(120) NULL,
+    card_issuer VARCHAR(120) NULL,
+    card_brand VARCHAR(120) NULL,
+    risk_level VARCHAR(40) NULL,
+    raw_init_response LONGTEXT NULL,
+    raw_ipn_payload LONGTEXT NULL,
+    raw_validation_response LONGTEXT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at DATETIME NULL,
+    INDEX idx_payment_transactions_order_id (order_id),
+    INDEX idx_payment_transactions_status (status),
+    INDEX idx_payment_transactions_gateway (gateway),
+    CONSTRAINT fk_payment_transactions_order
+        FOREIGN KEY (order_id) REFERENCES tbl_orders(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
