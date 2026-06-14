@@ -387,11 +387,32 @@ INSERT IGNORE INTO tbl_admin (
 ) VALUES
     (
         1,
-        'Demo Administrator',
-        'admin',
-        'admin@smartstock.local',
-        '$2y$10$0NXu1LUe7qPJtMqJnWPTsOyHzrFb8xfbqEkPrMowSXorhcbizfXgm',
+        'Administrator',
+        'monem',
+        'adminmonem@smartstock.local',
+        '$2y$10$4pbbrD6m6rPPduEXl1lNreVFcb.AcONaDt22e9mTH9m6eHPlJZcR2',
         'super_admin'
+    ),
+    INSERT IGNORE INTO tbl_admin (
+
+    id, full_name, username, email, password, role
+
+) VALUES
+(
+        5,
+        'Administrator',
+        'monem',
+        'adminmonem@smartstock.local',
+        '$2y$10$4pbbrD6m6rPPduEXl1lNreVFcb.AcONaDt22e9mTH9m6eHPlJZcR2',
+        'super_admin'
+    ),
+    (
+        2,
+        'mradmin',
+        'mradmin',
+        'mradmin@smartstock.local',
+        '$2y$10$4pbbrD6m6rPPduEXl1lNreVFcb.AcONaDt22e9mTH9m6eHPlJZcR2',
+        'superadmin'
     );
 
 INSERT IGNORE INTO tbl_coupons (
