@@ -1759,6 +1759,20 @@ img {
     background: rgba(255, 255, 255, 0.08);
 }
 
+.btn-admin-hero {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-color: rgba(255, 255, 255, 0.24);
+    color: #ffffff;
+    box-shadow: 0 18px 38px rgba(217, 119, 6, 0.26);
+}
+
+.btn-admin-hero:hover {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 100%);
+    border-color: rgba(255, 255, 255, 0.34);
+    color: #ffffff;
+    box-shadow: 0 22px 42px rgba(180, 83, 9, 0.3);
+}
+
 .home-section-btn {
     min-width: 210px;
 }

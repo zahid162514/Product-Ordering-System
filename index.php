@@ -66,6 +66,10 @@ $categories = $conn->query(
                         <a href="admin/contact.php" class="btn btn-outline-light btn-lg home-hero-btn-secondary">
                             Contact Support
                         </a>
+
+                        <a href="admin/admin-login.php" class="btn btn-admin-hero btn-lg home-hero-btn-secondary">
+                            Admin Login
+                        </a>
                     </div>
                 </div>
             </div>
